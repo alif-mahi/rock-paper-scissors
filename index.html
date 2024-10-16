@@ -6,16 +6,29 @@
         <link rel="icon" type="image/png" size="16x16" href="images/favicon-16x16.png">
         <link rel="icon" type="image/png" size="32x32" href="images/favicon-32x32.png">
         <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="container">
             <div class="header">
                 <h1>Rock Paper Scissors</h1>
+                <h2>First to reach 5 wins</h2>
             </div>
             <div class="scoreCard">
-                <h1>Your Score</h1>
-                <h2 class="score"></h2>
-                <h1>Opponent's Score</h1>
+                <div class="playerScore">
+                    <img src="images/question.png">
+                    <div class="score">
+                        <h1>Player:</h1>
+                        <h1 class="score">0</h1>
+                    </div>   
+                </div>
+                <div class="computerScore">
+                    <img src="images/question.png">
+                    <div class="score">
+                        <h1>Computer:</h1>
+                        <h1 class="score">0</h1>
+                    </div>
+                </div>
             </div>
             <div class="moves">
                 <img class="rock" src="images/rock.png" alt="Icon for Rock">
