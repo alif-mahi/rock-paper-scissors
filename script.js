@@ -1,12 +1,13 @@
 const moves = ['Rock', 'Paper', 'Scissors'];
-
-let computerChoice;
-let playerChoice;
 const playerCount = document.getElementById('playerScoreNum');
 const computerCount = document.getElementById('computerScoreNum');
 const playerImage = document.querySelector('.playerScore img');
 const computerImage = document.querySelector('.computerScore img');
 const bannerText = document.querySelector('.header h2');
+const rockButton = document.querySelector('.rock');
+const paperButton = document.querySelector('.paper');
+const scissorsButton = document.querySelector('.scissors');
+const newMatch = document.querySelector('button');
 
 function randomChoice(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -52,3 +53,35 @@ function playRound(playerMove) {
         bannerText.textContent = "It's a Draw";
     }
 }
+
+rockButton.addEventListener('click', () => {
+    scoreCheck('Rock');
+})
+
+paperButton.addEventListener('click', () => {
+    scoreCheck('Paper');
+})
+
+scissorsButton.addEventListener('click', () => {
+    scoreCheck('Scissors');
+})
+
+function scoreCheck(move) {
+    let playerScore = parseInt(playerCount.textContent);
+    let computerScore = parseInt(computerCount.textContent);
+    if (playerScore == 5 || computerScore == 5) {
+        if (playerScore == 5) {
+            bannerText.textContent = "You Win!\nPlease start a new match";
+        } else {
+            bannerText.textContent = "You Lost!\nPlease start a new match";
+        }
+    } else {
+        playRound(move);
+    }
+}
+
+newMatch.addEventListener('click', () => {
+    computerCount.textContent = 0;
+    playerCount.textContent = 0;
+    bannerText.textContent = 'First to reach 5 wins';
+})
