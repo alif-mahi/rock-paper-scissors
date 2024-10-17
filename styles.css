@@ -72,6 +72,7 @@ div.score {
     border: 5px solid black;
     border-radius: 5px;
     margin: 30px;
+    cursor: pointer;
 }
 
 button {
@@ -81,6 +82,7 @@ button {
     background-color: #225560;
     font-family: 'Press Start 2P', cursive;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover {
