@@ -84,6 +84,6 @@ newMatch.addEventListener('click', () => {
     computerCount.textContent = 0;
     playerCount.textContent = 0;
     bannerText.textContent = 'First to reach 5 wins';
-    playerImage.src = 'images/' + playerMove.toLowerCase() + '.png';
-    computerImage.src = 'images/' + computerMove.toLowerCase() + '.png';
+    playerImage.src = 'images/question.png';
+    computerImage.src = 'images/question.png';
 })
